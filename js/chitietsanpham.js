@@ -6,7 +6,7 @@ window.onload = function () {
     khoiTao();
 
     // thêm tags (từ khóa) vào khung tìm kiếm
-    var tags = ["Samsung", "iPhone", "Huawei", "Oppo", "Mobi"];
+    var tags = ["Sony", "Canon", "Panasonic", "Nikon", "Samsung"];
     for (var t of tags) addTags(t, "index.html?search=" + t, true);
 
     phanTich_URL_chiTietSanPham();
@@ -34,7 +34,7 @@ function phanTich_URL_chiTietSanPham() {
     var divChiTiet = document.getElementsByClassName('chitietSanpham')[0];
 
     // Đổi title
-    document.title = nameProduct + ' - Thế giới điện thoại';
+    document.title = nameProduct + ' - Thế giới máy ảnh';
 
     // Cập nhật tên h1
     var h1 = divChiTiet.getElementsByTagName('h1')[0];
@@ -70,15 +70,15 @@ function phanTich_URL_chiTietSanPham() {
 
     // Cập nhật thông số
     var info = document.getElementsByClassName('info')[0];
-    var s = addThongSo('Màn hình', sanPham.detail.screen);
-    s += addThongSo('Hệ điều hành', sanPham.detail.os);
-    s += addThongSo('Camara sau', sanPham.detail.camara);
-    s += addThongSo('Camara trước', sanPham.detail.camaraFront);
-    s += addThongSo('CPU', sanPham.detail.cpu);
-    s += addThongSo('RAM', sanPham.detail.ram);
-    s += addThongSo('Bộ nhớ trong', sanPham.detail.rom);
-    s += addThongSo('Thẻ nhớ', sanPham.detail.microUSB);
-    s += addThongSo('Dung lượng pin', sanPham.detail.battery);
+    var s = addThongSo('Cảm biến', sanPham.detail.camBien);
+    s += addThongSo('Màn hình', sanPham.detail.manHinh);
+    s += addThongSo('Lấy nét tự động', sanPham.detail.layNet);
+    s += addThongSo('Quay phim', sanPham.detail.quayPhim);
+    s += addThongSo('ISO', sanPham.detail.iso);
+    s += addThongSo('Tốc độ chụp', sanPham.detail.tocDoChup);
+    s += addThongSo('Bộ nhớ', sanPham.detail.boNho);
+    s += addThongSo('Kích thước', sanPham.detail.kichThuoc);
+    s += addThongSo('Trọng lượng', sanPham.detail.trongLuong);
     info.innerHTML = s;
 
     // Cập nhật hình

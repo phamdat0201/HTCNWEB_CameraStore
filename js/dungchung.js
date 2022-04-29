@@ -1,6 +1,6 @@
 var adminInfo = [{
     "username": "admin",
-    "pass": "adadad"
+    "pass": "admin"
 }];
 
 function getListAdmin() {
@@ -770,32 +770,32 @@ function getThongTinSanPhamFrom_TheGioiDiDong() {
 					var giatri = li.getElementsByTagName('div')[0].innerText;
 	
 					switch (loai) {
+						case "Cảm biến:":
+							result.detail.camBien = giatri.replace('"', "'");
+							break;
 						case "Màn hình:":
-							result.detail.screen = giatri.replace('"', "'");
+							result.detail.manHinh = giatri;
 							break;
-						case "Hệ điều hành:":
-							result.detail.os = giatri;
+						case "Lấy nét":
+							result.detail.layNet = giatri;
 							break;
-						case "Camera sau:":
-							result.detail.camara = giatri;
+						case "Quay phim:":
+							result.detail.quayPhim = giatri;
 							break;
-						case "Camera trước:":
-							result.detail.camaraFront = giatri;
+						case "ISO:":
+							result.detail.iso = giatri;
 							break;
-						case "CPU:":
-							result.detail.cpu = giatri;
+						case "Tốc độ chụp:":
+							result.detail.tocDoChup = giatri;
 							break;
-						case "RAM:":
-							result.detail.ram = giatri;
+						case "Bộ nhớ:":
+							result.detail.boNho = giatri;
 							break;
-						case "Bộ nhớ trong:":
-							result.detail.rom = giatri;
+						case "Kích thước:":
+							result.detail.kichThuoc = giatri;
 							break;
-						case "Thẻ nhớ:":
-							result.detail.microUSB = giatri;
-							break;
-						case "Dung lượng pin:":
-							result.detail.battery = giatri;
+						case "Trọng lượng:":
+							result.detail.trongLuong = giatri;
 							break;
 					}
 				}
